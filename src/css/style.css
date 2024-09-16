@@ -1,7 +1,6 @@
 body {
     position: relative;
     font-family: sans-serif;
-
 }
 
 .desk {
@@ -13,6 +12,7 @@ h3 {
     text-align: center;
     text-transform: uppercase;
 }
+
 .column {
     width: 30%;
     margin: 0 auto;
@@ -20,7 +20,6 @@ h3 {
     border: 5px solid rgb(74, 216, 181);
     padding: 1%;
     align-self: flex-start;
-    /* position: relative; */
 }
 
 .card {
@@ -29,13 +28,7 @@ h3 {
     background-color: rgb(118, 118, 173);
     padding: 5%;
     position: relative;
-    /* cursor: grabbing; */
-
 }
-
-/* .card:last-child {
-    margin-bottom: 15px;
-} */
 
 .delete-card {
     position: absolute;
@@ -55,7 +48,6 @@ h3 {
     margin: 20px auto; 
     padding: 5%;
     position: relative;
-
 }
 
 .nd {
@@ -78,7 +70,6 @@ h3 {
     top: 0;
     z-index: 999;
     pointer-events: none;
-    /* background: green; */
     cursor: grabbing;
     padding: 0;
     margin: 0;
@@ -90,11 +81,9 @@ h3 {
 
 .card.selected {
     background-color: brown;
-    /* display: none; */
     opacity: 0;
 }
 
 .empty {
     background-color: darkslategray;
-    /* position: absolute; */
 }

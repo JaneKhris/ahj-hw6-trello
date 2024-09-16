@@ -1,21 +1,17 @@
-import { data } from "../data/data.js";
-import Column from "./Column.js";
-import dnd from "./dnd.js";
-import { readData, writeData } from "./localStorage.js";
+import data from '../data/data';
+import Column from './Column';
+import dnd from './dnd';
+import { readData, writeData } from './localStorage';
 
-const desk = document.querySelector(".desk");
+const desk = document.querySelector('.desk');
 let startData;
 
+const storageData = readData();
 
-const storageData = readData()
-
-if(storageData) {
-  startData = storageData
-  console.log('sss')
+if (storageData) {
+  startData = storageData;
 } else {
-
   startData = data;
-  console.log('aaaa')
 }
 
 for (const [key, value] of Object.entries(startData)) {
@@ -24,15 +20,9 @@ for (const [key, value] of Object.entries(startData)) {
   column.listeners();
 }
 
-dnd()
+dnd();
 
 window.addEventListener('beforeunload', (evt) => {
   evt.preventDefault();
-  
-  writeData()
-})
-
-
-
-
-
+  writeData();
+});
