@@ -1,0 +1,100 @@
+body {
+    position: relative;
+    font-family: sans-serif;
+
+}
+
+.desk {
+    display: flex;
+    position: relative;
+}
+
+h3 {
+    text-align: center;
+    text-transform: uppercase;
+}
+.column {
+    width: 30%;
+    margin: 0 auto;
+    background-color: rgb(220, 243, 234);
+    border: 5px solid rgb(74, 216, 181);
+    padding: 1%;
+    align-self: flex-start;
+    /* position: relative; */
+}
+
+.card {
+    border-radius: 5%;
+    margin: 10px auto; 
+    background-color: rgb(118, 118, 173);
+    padding: 5%;
+    position: relative;
+    /* cursor: grabbing; */
+
+}
+
+/* .card:last-child {
+    margin-bottom: 15px;
+} */
+
+.delete-card {
+    position: absolute;
+    top: 0;
+    right: 2px;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.visible {
+    opacity: 1;
+}
+
+.add-card {
+    background-color: cornflowerblue;
+    cursor: pointer;
+    margin: 20px auto; 
+    padding: 5%;
+    position: relative;
+
+}
+
+.nd {
+    display: none;
+}
+
+.form-add {
+    position: relative;
+}
+
+.close-form {
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+
+.card.dragged {
+    position: absolute;
+    top: 0;
+    z-index: 999;
+    pointer-events: none;
+    /* background: green; */
+    cursor: grabbing;
+    padding: 0;
+    margin: 0;
+    border-radius: 5%;
+    margin: 10px auto; 
+    background-color: rgb(118, 118, 173);
+
+}
+
+.card.selected {
+    background-color: brown;
+    /* display: none; */
+    opacity: 0;
+}
+
+.empty {
+    background-color: darkslategray;
+    /* position: absolute; */
+}
