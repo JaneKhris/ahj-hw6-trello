@@ -8,4 +8,4 @@ install:
   - yarn # команда установки зависимостей
 build: off
 build_script:
-  - yarn run build   # команда сборки
+  - yarn build   # команда сборки
