@@ -8,7 +8,7 @@ export default class AddCardForm {
     this.form = document.createElement('form');
     this.form.className = 'form-add';
     this.form.innerHTML = `
-        <input name="card" type="text" placeholder="New card" required>
+        <input class="input-name" name="card" type="text" placeholder="New card" required>
         <button>Add</button>
         <div class="close-form">x</div>
         `;

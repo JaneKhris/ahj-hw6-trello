@@ -35,11 +35,11 @@ export default class Column {
 
   addCard(text) {
     this.cardsArray.push(text);
-    const newCard = new Card(this.column, text);
+    const newCard = new Card(this.column.querySelector('.card-container'), text);
     const newCardHtml = newCard.getHtmlElement();
     newCard.listeners();
     newCardHtml.querySelector('.delete-card').addEventListener('click', (evt) => this.onDelete(evt));
-    this.column.querySelector('.add-card').before(newCardHtml);
+    this.column.querySelector('.card-container').appendChild(newCardHtml);
   }
 
   onDelete(evt) {
