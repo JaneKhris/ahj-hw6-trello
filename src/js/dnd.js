@@ -34,6 +34,8 @@ export default function dnd() {
       selectedEl = evt.target.closest('.card');
     } else return;
 
+    selectedEl.querySelector('.delete-card').classList.remove('visible');
+
     const clientRect = selectedEl.getBoundingClientRect();
     deltaX = evt.pageX - clientRect.left;
     deltaY = evt.pageY - clientRect.top;
@@ -64,15 +66,17 @@ export default function dnd() {
     }
     if (ghostEl) {
       draggedEl.classList.remove('dragged');
-
       draggedEl.style = null;
-      container.insertBefore(draggedEl, ghostEl);
+      draggedEl.remove();
+
+      selectedEl.classList.remove('selected');
+      container.insertBefore(selectedEl, ghostEl);
       ghostEl.remove();
-      selectedEl.remove();
     } else {
       draggedEl.remove();
       selectedEl.classList.remove('selected');
     }
+
     clearDragged();
   };
 

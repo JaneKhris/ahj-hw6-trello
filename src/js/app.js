@@ -22,7 +22,6 @@ for (const [key, value] of Object.entries(startData)) {
 
 dnd();
 
-window.addEventListener('beforeunload', (evt) => {
-  evt.preventDefault();
+window.addEventListener('beforeunload', () => {
   writeData();
 });
